@@ -10,6 +10,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = path.resolve();
+app.use(express.json()); //req.body
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
